@@ -18,3 +18,21 @@ let ShoppingItem: Dropdown<string> = {
   value: 'bag',
   title: '가방',
 }
+
+// 타입 추론 기본 3
+interface Dropdown<T> {
+  value: T;
+  title: string;
+}
+interface DetailedDropdown<K> extends Dropdown<K>{
+  description: string;
+  tag: K;
+}
+
+let detailedItem: DetailedDropdown<string> = {
+  description: '설명',
+  tag: 'asdf',
+  value: 'asdlf',
+  title: 'asldfkj'
+}
+
